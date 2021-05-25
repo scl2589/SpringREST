@@ -35,4 +35,8 @@ public class CustomerService {
             counter++;
         }
     }
+
+    public void deleteCustomer(Integer id) {
+        customerList.removeIf(customer -> customer.getId() == id);
+    }
 }
