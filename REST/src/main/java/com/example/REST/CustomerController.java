@@ -24,8 +24,13 @@ public class CustomerController {
     }
 
     @PostMapping("/customers")
-    public void addTopic(@RequestBody Customer customer) {
+    public void getCustomer(@RequestBody Customer customer) {
         customerService.addCustomer(customer);
+    }
+
+    @PutMapping("/customers/{id}")
+    public void updateCustomer(@RequestBody Customer customer, @PathVariable("id") Integer id) {
+        customerService.updateCustomer(customer, id);
     }
 
 }

@@ -25,4 +25,14 @@ public class CustomerService {
     public void addCustomer(Customer customer) {
         customerList.add(customer);
     }
+
+    public void updateCustomer(Customer customer, Integer id) {
+        int counter = 0;
+        for (Customer customer1 : customerList) {
+            if (customer1.getId() == id) {
+                customerList.set(counter, customer);
+            }
+            counter++;
+        }
+    }
 }
