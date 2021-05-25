@@ -7,6 +7,7 @@ public class Customer {
     private String custAddress;
 
     public Customer(Integer id, String membership, String custName, String custAddress) {
+        this.id = id;
         this.membership = membership;
         this.custName = custName;
         this.custAddress = custAddress;

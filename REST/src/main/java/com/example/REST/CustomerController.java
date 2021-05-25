@@ -1,10 +1,7 @@
 package com.example.REST;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
@@ -26,6 +23,9 @@ public class CustomerController {
         return customerService.getCustomer(id);
     }
 
-
+    @PostMapping("/customers")
+    public void addTopic(@RequestBody Customer customer) {
+        customerService.addCustomer(customer);
+    }
 
 }

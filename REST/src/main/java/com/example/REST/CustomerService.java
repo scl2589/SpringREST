@@ -21,4 +21,8 @@ public class CustomerService {
     public Customer getCustomer(Integer id) {
         return customerList.stream().filter(customer -> customer.getId() == id).findFirst().get();
     }
+
+    public void addCustomer(Customer customer) {
+        customerList.add(customer);
+    }
 }
